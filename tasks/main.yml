@@ -1,0 +1,9 @@
+---
+
+- ansible.builtin.include_tasks: "{{ role_path }}/tasks/ufw.yml"
+  when: system_security_ufw_enabled | bool
+  tags:
+    - setup-all
+    - setup-ufw
+    - install-all
+    - install-ufw
