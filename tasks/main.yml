@@ -52,6 +52,14 @@
       comment: heisenbridge/identd
     when: matrix_heisenbridge_enabled | bool
 
+  - name: Allow firezone
+    community.general.ufw:
+      rule: allow
+      port: "{{ firezone_wireguard_container_port }}"
+      proto: udp
+      comment: firezone
+    when: firezone_enabled | bool
+
   - name: Allow wireguard
     community.general.ufw:
       rule: allow

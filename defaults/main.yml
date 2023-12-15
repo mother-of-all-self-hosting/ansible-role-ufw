@@ -69,6 +69,10 @@ matrix_bot_postmoogle_submission_host_bind_port: '587'
 matrix_heisenbridge_enabled: false
 matrix_heisenbridge_identd_port: '113'
 
+# firezone integration
+firezone_enabled: false
+firezone_wireguard_container_port: '51820'
+
 # custom/wireguard integration
 custom_wireguard_enabled: false
 custom_wireguard_port: '51820'
