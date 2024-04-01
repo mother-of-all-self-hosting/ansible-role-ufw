@@ -73,6 +73,10 @@ matrix_heisenbridge_identd_port: '113'
 firezone_enabled: false
 firezone_wireguard_container_port: '51820'
 
+# peertube integration
+peertube_enabled: false
+peertube_container_rtmp_host_bind_port: '1935'
+
 # custom/wireguard integration
 custom_wireguard_enabled: false
 custom_wireguard_port: '51820'

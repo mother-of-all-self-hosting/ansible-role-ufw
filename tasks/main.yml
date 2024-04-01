@@ -60,6 +60,22 @@
       comment: firezone
     when: firezone_enabled | bool
 
+  - name: Allow peertube RTMP (TCP)
+    community.general.ufw:
+      rule: allow
+      port: "{{ peertube_container_rtmp_host_bind_port }}"
+      proto: tcp
+      comment: peertube RTMP
+    when: peertube_enabled | bool
+
+  - name: Allow peertube RTMP (UDP)
+    community.general.ufw:
+      rule: allow
+      port: "{{ peertube_container_rtmp_host_bind_port }}"
+      proto: udp
+      comment: peertube RTMP
+    when: peertube_enabled | bool
+
   - name: Allow wireguard
     community.general.ufw:
       rule: allow
