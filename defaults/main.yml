@@ -23,10 +23,18 @@ system_security_ufw_rules:
     rule: allow
     port: '443'
     proto: tcp
+  - name: HTTPS over UDP
+    rule: allow
+    port: '443'
+    proto: udp
   - name: Matrix Federation
     rule: allow
     port: '8448'
     proto: tcp
+  - name: Matrix Federation over UDP
+    rule: allow
+    port: '8448'
+    proto: udp
   - name: TURN TCP
     rule: allow
     port: '3478'
