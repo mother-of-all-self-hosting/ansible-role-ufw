@@ -19,6 +19,7 @@
       from: "{{ item.from | default(omit) }}"
       proto: "{{ item.proto }}"
       comment: "{{ item.name }}"
+      delete: "{{ item.delete | default(false) }}"
     with_items: "{{ system_security_ufw_rules }}"
 
   - name: Allow email receiving (plain)
