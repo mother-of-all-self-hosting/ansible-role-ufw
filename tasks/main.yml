@@ -16,6 +16,7 @@
     community.general.ufw:
       rule: "{{ item.rule }}"
       port: "{{ item.port }}"
+      from: "{{ item.from | default(omit) }}"
       proto: "{{ item.proto }}"
       comment: "{{ item.name }}"
     with_items: "{{ system_security_ufw_rules }}"
